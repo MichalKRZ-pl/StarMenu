@@ -1,0 +1,15 @@
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin wheel($size, $border-size, $border-color) {
+  //size in % of parent square
+  @include position-center;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  border: $border-size, solid, $border-color;
+}
