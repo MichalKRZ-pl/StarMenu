@@ -15,3 +15,18 @@
   position: relative;
 }
 
+.star {
+  &__first-wheel {
+    @include wheel(20%, 3px, blue);
+  }
+  &__second-wheel {
+    @include wheel(30%, 6px, gray);
+  }
+  &__gear-wheel {
+    @include wheel(50%, 3px, transparent);
+    background-clip: padding-box;
+    &--bottom {
+      @include wheel(50%, 3px, darkgreen);
+    }
+  }
+}
