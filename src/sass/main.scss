@@ -9,6 +9,8 @@
 }
 
 .container {
+  top: 200px;
+  left: 100px;
   height: 500px;
   width: 500px;
   border: 1px solid green;
@@ -29,7 +31,6 @@
       @include wheel(50%, 3px, darkgreen);
     }
   }
-
   &__external-wheel {
     @include wheel(80%, 1px, gray);
   }

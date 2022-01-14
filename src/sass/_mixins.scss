@@ -13,3 +13,13 @@
   height: $size;
   border: $border-size, solid, $border-color;
 }
+
+@mixin diagonal($width, $rotation) {
+  @include position-center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: $width;
+}
