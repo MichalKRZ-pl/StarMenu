@@ -1,5 +1,19 @@
 @import "./mixins.scss";
 
+//Sass variables to define element sizes
+$first-wheel-size: 15%;
+$first-wheel-thiccness: 3px;
+$first-wheel-color: blue;
+$second-wheel-size: 30%;
+$second-wheel-thiccness: 6px;
+$second-wheel-color: gray;
+$gear-wheel-size: 50%;
+$gear-wheel-thiccness: 3px;
+$gear-wheel-color: darkgreen;
+$external-wheel-size: 85%;
+$external-wheel-thiccness: 1px;
+$external-wheel-color: gray;
+
 *,
 *::before,
 *::after {
@@ -19,24 +33,26 @@
 
 .star {
   &__first-wheel {
-    @include wheel(20%, 3px, blue);
+    @include wheel($first-wheel-size, $first-wheel-thiccness, $first-wheel-color);
+    z-index: 4;
   }
   &__second-wheel {
-    @include wheel(30%, 6px, gray);
+    @include wheel($second-wheel-size, $second-wheel-thiccness, $second-wheel-color);
+    z-index: 3;
   }
   &__gear-wheel {
-    @include wheel(50%, 3px, transparent);
+    @include wheel($gear-wheel-size, $gear-wheel-thiccness, transparent);
     background-clip: padding-box;
     background-color: white;
     z-index: 2;
 
     &--bottom {
-      @include wheel(50%, 3px, darkgreen);
+      @include wheel($gear-wheel-size, $gear-wheel-thiccness, $gear-wheel-color);
       z-index: 0;
     }
   }
   &__external-wheel {
-    @include wheel(85%, 1px, gray);
+    @include wheel($external-wheel-size, $external-wheel-thiccness, $external-wheel-color);
   }
 
   &__diagonal {
