@@ -29,4 +29,8 @@
       @include wheel(50%, 3px, darkgreen);
     }
   }
+
+  &__external-wheel {
+    @include wheel(80%, 1px, gray);
+  }
 }
