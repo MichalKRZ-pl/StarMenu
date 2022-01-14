@@ -27,8 +27,12 @@
   &__gear-wheel {
     @include wheel(50%, 3px, transparent);
     background-clip: padding-box;
+    background-color: white;
+    z-index: 2;
+
     &--bottom {
       @include wheel(50%, 3px, darkgreen);
+      z-index: 0;
     }
   }
   &__external-wheel {
@@ -36,7 +40,6 @@
   }
 
   &__diagonal {
-    //background-color: tomato;
     &:nth-last-child(6) {
       @include diagonal(15%, 0deg);
     }
@@ -56,6 +59,13 @@
       @include diagonal(15%, 150deg);
     }
   }
+
+  &__tooth {
+    @include tooth(60%, 50%, 3px, darkgreen);
+    background-color: white;
+    z-index: 1;
+  }
+  //@mixin tooth($height, $width, $border-size, $border-color)
 
   &__btn {
     width: 100%;

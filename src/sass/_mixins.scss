@@ -24,3 +24,9 @@
   width: $width;
   transform: translate(-50%, -50%) rotateZ($rotation);
 }
+
+@mixin tooth($height, $width, $border-size, $border-color) {
+  height: $height;
+  width: $width;
+  border: $border-size solid $border-color;
+}
