@@ -14,6 +14,10 @@ $external-wheel-size: 85%;
 $external-wheel-thiccness: 1px;
 $external-wheel-color: gray;
 
+$diagonal-width: 15%;
+$gear-tooth-height: 60%;
+$gear-tooth-width: 50%; //this is defined as percentage of diagonal width
+
 *,
 *::before,
 *::after {
@@ -57,27 +61,27 @@ $external-wheel-color: gray;
 
   &__diagonal {
     &:nth-last-child(6) {
-      @include diagonal(15%, 0deg);
+      @include diagonal($diagonal-width, 0deg);
     }
     &:nth-last-child(5) {
-      @include diagonal(15%, 30deg);
+      @include diagonal($diagonal-width, 30deg);
     }
     &:nth-last-child(4) {
-      @include diagonal(15%, 60deg);
+      @include diagonal($diagonal-width, 60deg);
     }
     &:nth-last-child(3) {
-      @include diagonal(15%, 90deg);
+      @include diagonal($diagonal-width, 90deg);
     }
     &:nth-last-child(2) {
-      @include diagonal(15%, 120deg);
+      @include diagonal($diagonal-width, 120deg);
     }
     &:nth-last-child(1) {
-      @include diagonal(15%, 150deg);
+      @include diagonal($diagonal-width, 150deg);
     }
   }
 
   &__tooth {
-    @include tooth(60%, 50%, 3px, darkgreen);
+    @include tooth($gear-tooth-height, $gear-tooth-width, $gear-wheel-thiccness, $gear-wheel-color);
     background-color: white;
     z-index: 1;
   }
