@@ -32,6 +32,37 @@
     }
   }
   &__external-wheel {
-    @include wheel(80%, 1px, gray);
+    @include wheel(85%, 1px, gray);
+  }
+
+  &__diagonal {
+    //background-color: tomato;
+    &:nth-last-child(6) {
+      @include diagonal(15%, 0deg);
+    }
+    &:nth-last-child(5) {
+      @include diagonal(15%, 30deg);
+    }
+    &:nth-last-child(4) {
+      @include diagonal(15%, 60deg);
+    }
+    &:nth-last-child(3) {
+      @include diagonal(15%, 90deg);
+    }
+    &:nth-last-child(2) {
+      @include diagonal(15%, 120deg);
+    }
+    &:nth-last-child(1) {
+      @include diagonal(15%, 150deg);
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 0;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    border-radius: 50%;
+    border: none;
   }
 }
