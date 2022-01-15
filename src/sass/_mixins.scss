@@ -23,6 +23,10 @@
   height: 100%;
   width: $width;
   transform: translate(-50%, -50%) rotateZ($rotation);
+
+  .star__btn {
+    transform: rotateZ(-$rotation);
+  }
 }
 
 @mixin tooth($height, $width, $border-size, $border-color) {
